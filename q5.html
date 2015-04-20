@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quiz</title>   
+
+<script>
+function evaluateQuestion() {     
+var points= eval(location.search.substring(1));
+var radios = document.getElementsByName('antwort50');
+for (var i = 0, length = radios.length; i < length; i++) {
+	if (radios[i].checked) {
+		if(radios[i].value == 1){
+			points++;
+		}
+	}
+ }                                           
+document.write("You have answered "+points+' questions correctly!');
+}
+</script>
+
+</head>
+                      
+<body>                         
+<!--  Questions taken from http://www.testedich.de/quizerstellungneu/dasquiztd.php3?testid=999895847 -->
+
+<h2> 5. Question </h2>                                 
+How large is Switzerland (in square kilometers)?   <br>
+<form name="question5">
+   <INPUT TYPE="RADIO" NAME="antwort50" VALUE="0"> 34241 <br>
+    <INPUT TYPE="RADIO" NAME="antwort50" VALUE="0"> 38903 <br>
+    <INPUT TYPE="RADIO" NAME="antwort50" VALUE="0"> 39873 <br>
+  	<INPUT TYPE="RADIO" NAME="antwort50" VALUE="0"> 39874 <br>
+    <INPUT TYPE="RADIO" NAME="antwort50" VALUE="1"> 41284 <br>
+	</B>
+<input type="button" VALUE="next"
+ onclick="evaluateQuestion();">    
+</form>                                           
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quiz</title>   
+
+<script>
+function evaluateQuestion() {     
+var points= eval(location.search.substring(1));
+var radios = document.getElementsByName('antwort40');
+for (var i = 0, length = radios.length; i < length; i++) {
+	if (radios[i].checked) {
+		if(radios[i].value == 1){
+			points++;
+		}
+	}
+ }                                      
+var nextPage = './q5.html?p='+points
+window.open(nextPage,'_self')   
+
+}
+</script>
+
+</head>
+                      
+<body>                         
+<!--  Questions taken from http://www.testedich.de/quizerstellungneu/dasquiztd.php3?testid=999895847 -->
+
+<h2> 4. Question </h2>                                 
+Switzerland has common borders with how many countries?   <br>
+<form name="question4"> 
+	<INPUT TYPE="RADIO" NAME="antwort40" VALUE="0"> 3        <br>   
+	<INPUT TYPE="RADIO" NAME="antwort40" VALUE="0"> 4   <br>   
+	<INPUT TYPE="RADIO" NAME="antwort40" VALUE="1"> 5       <br>   
+	<INPUT TYPE="RADIO" NAME="antwort40" VALUE="0"> 6      <br>   
+	<INPUT TYPE="RADIO" NAME="antwort40" VALUE="0"> 7        <br>   
+	</B>
+<input type="button" VALUE="next"
+ onclick="evaluateQuestion();">    
+</form>                                           
+</body>
+
+</html>

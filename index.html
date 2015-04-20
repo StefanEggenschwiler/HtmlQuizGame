@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+
+    <script>
+        function evaluateQuestion() {
+            var points =0;
+            var radios = document.getElementsByName('antwort10');
+            for (var i = 0, length = radios.length; i < length; i++) {
+                if (radios[i].checked) {
+                    if(radios[i].value == 1){
+                        points++;
+                    }
+                }
+            }
+            var nextPage = './q2.html?p='+points
+            window.open(nextPage,'_self')
+        }
+    </script>
+
+</head>
+
+
+
+<body>
+
+<h1> Quiz </h1>
+This is an example for a small quiz game, consisting of five questions:
+<!--  Questions taken from http://www.testedich.de/quizerstellungneu/dasquiztd.php3?testid=999895847 -->
+
+<h2> 1. Question </h2>
+What is the name of the capital of Switzerland?   <br>
+<form name="question1">
+    <INPUT TYPE="RADIO" NAME="antwort10" VALUE="0"> Genf        <br>
+    <INPUT TYPE="RADIO" NAME="antwort10" VALUE="0"> Z&uumlrich   <br>
+    <INPUT TYPE="RADIO" NAME="antwort10" VALUE="0"> Basel       <br>
+    <INPUT TYPE="RADIO" NAME="antwort10" VALUE="0"> Luzern      <br>
+    <INPUT TYPE="RADIO" NAME="antwort10" VALUE="1"> Bern        <br>
+    </B>
+    <input type="button" VALUE="next"
+           onclick="evaluateQuestion();">
+</form>
+</body>
+
+</html>
