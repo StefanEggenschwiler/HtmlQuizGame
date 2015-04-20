@@ -4,21 +4,21 @@
 var i;
 
 function initialize() {
-    var i = 1;
+    i = 1;
     var answerOptions = [3, 4, 5, 6, 7];
     var answer = 3;
-    createQuestion(1, "Are you mad, bro?", answerOptions, answer);
+    createQuestion("Are you mad, bro?", answerOptions, answer);
     i++;
 }
 
-function createQuestion(questionNo, question, answerOptions, answer) {
-    document.getElementById("question").innerHTML = questionNo +'. Question: '+question;
+function createQuestion(question, answerOptions, answer) {
+    document.getElementById("question").innerHTML = i +'. Question: '+question;
 
-    for (var i = 0; i < answerOptions.length; i++) {
-        if(i+1 === answer) {
-            makeRadioButton(true, answerOptions[i]);
+    for (var index = 0; index < answerOptions.length; index++) {
+        if(index+1 === answer) {
+            makeRadioButton(true, answerOptions[index]);
         } else {
-            makeRadioButton(false, answerOptions[i]);
+            makeRadioButton(false, answerOptions[index]);
         }
     }
 }
