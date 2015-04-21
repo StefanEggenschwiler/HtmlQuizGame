@@ -36,9 +36,9 @@ function evaluateQuestion() {
 
 //http://stackoverflow.com/a/3955238
 function removePreviousQuestion() {
-    var myNode = document.getElementById("placeholder");
-    while (myNode.firstChild) {
-        myNode.removeChild(myNode.firstChild);
+    var placeholder = document.getElementById("placeholder");
+    while (placeholder.firstChild) {
+        placeholder.removeChild(placeholder.firstChild);
     }
 }
 
