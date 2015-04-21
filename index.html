@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Quiz</title>
-
-    <script src="LogicScript.js"></script>
-
-</head>
-
-
-
-<body onload="initialize()">
-<form>
-    <fieldset id="radioButtonGroup">
-        <legend><var id="question"/></legend>
-        <div id="placeholder"></div>
-        <input type="button" value="Submit answer" onclick="evaluateQuestion()" />
-    </fieldset>
-</form>
-</body>
+    <head>
+        <title>Quiz</title>
+        <script src="LogicScript.js"></script>
+    </head>
+    <body onload="initialize()">
+        <h1> Quiz </h1>
+        This is an example for a small quiz game, consisting of five questions:
+    <!--  Questions taken from http://www.testedich.de/quizerstellungneu/dasquiztd.php3?testid=999895847 -->
+        <form>
+            <fieldset id="radioButtonGroup">
+                <legend><var id="question"/></legend>
+                <div id="placeholder"></div>
+                <input type="button" value="Submit answer" onclick="evaluateQuestion()" />
+            </fieldset>
+        </form>
+    </body>
 </html>

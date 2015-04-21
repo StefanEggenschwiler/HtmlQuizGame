@@ -3,10 +3,12 @@
  */
 var questionNo;
 var answer;
+var points;
 
 function initialize() {
     questionNo = 1;
-    createQuestion("Welche Farbe hat der Himmel?", ["Blau", "Rot", "Grün", "Pink", "Affe"], 0);
+    points = 0;
+    nextQuestion();
 }
 
 function createQuestion(question, answerOptions, ans) {
@@ -24,14 +26,13 @@ function evaluateQuestion() {
     for (var i = 0, length = radios.length; i < length; i++) {
         if (radios[i].checked) {
             if(i == answer){
-                alert('Answer is true! Next Question!');
-                removePreviousQuestion();
-                createQuestion("Wieviele Sterne hat das Walliser Wappen?", [10, 12, 13, 19, 22, "over 9000"], 2);
-            } else {
-                alert('Answer is false! Try again!');
+                points++;
             }
+            removePreviousQuestion();
+            nextQuestion();
         }
     }
+
 }
 
 //http://stackoverflow.com/a/3955238
@@ -54,4 +55,27 @@ function createRadioButton(text) {
     label.appendChild(document.createElement("br"));
 
     document.getElementById("placeholder").appendChild(label);
+}
+
+function nextQuestion() {
+    switch (questionNo) {
+        case 1:
+            createQuestion("What is the name of the capital of Switzerland?", ["Genf", "Z\u00FCrich", "Basel", "Luzern", "Bern"], 4);
+            break;
+        case 2:
+            createQuestion("What is the name of the biggest city in Switzerland?", ["Lausanne", "Z\u00FCrich", "Genf", "Basel", "Bern"], 1);
+            break;
+        case 3:
+            createQuestion("Who became a national hero out of a work by the German poet Schiller?", ["Adolf Ogi", "Andr\u00E9 Bucher", "Roger Schawinsky", "Rudolph von Habsburg", "Wilhelm Tell"], 4);
+            break;
+        case 4:
+            createQuestion("Switzerland has common borders with how many countries?", [3, 4, 5, 6, 7, "over 9000"], 2);
+            break;
+        case 5:
+            createQuestion("How large is Switzerland (in square kilometers)?", [34241, 38903, 39873, 39874, 41284], 4);
+            break;
+        case 6:
+            alert("Quiz finished! You got "+points+" out of "+(questionNo-1)+ " right!");
+            break;
+    }
 }
