@@ -1,4 +1,4 @@
-# HtmlQuizGame possible features:
+**HtmlQuizGame possible features:**
 0. CSS
 1. Dynamic questions
 2. Save score internal
