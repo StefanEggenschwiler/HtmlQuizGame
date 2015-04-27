@@ -68,12 +68,13 @@ function createRadioButton(text) {
     var label = document.createElement("label");
     var radio = document.createElement("input");
     var span = document.createElement("span");
+    
     var textNode = document.createTextNode(text);
     span.appendChild(textNode);
 
     radio.type = "radio";
     radio.name = "answerOptions";
-    radio.style.display = 'none';
+    radio.style.display = "none";
 
     label.appendChild(radio);
     label.appendChild(span);
