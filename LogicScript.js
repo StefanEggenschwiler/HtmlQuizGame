@@ -83,22 +83,28 @@ function createRadioButton(text) {
 function nextQuestion() {
     switch (questionNo) {
         case 1:
-            createQuestion("What is the name of the capital of Switzerland?", ["Genf", "Z\u00FCrich", "Basel", "Luzern", "Bern"], 4);
+            createQuestion("What is the name of the capital of Switzerland?",
+                ["Genf", "Z\u00FCrich", "Basel", "Luzern", "Bern"], 4);
             break;
         case 2:
-            createQuestion("What is the name of the biggest city in Switzerland?", ["Lausanne", "Z\u00FCrich", "Genf", "Basel", "Bern"], 1);
+            createQuestion("What is the name of the biggest city in Switzerland?",
+                ["Lausanne", "Z\u00FCrich", "Genf", "Basel", "Bern"], 1);
             break;
         case 3:
-            createQuestion("Who became a national hero out of a work by the German poet Schiller?", ["Adolf Ogi", "Andr\u00E9 Bucher", "Roger Schawinsky", "Rudolph von Habsburg", "Wilhelm Tell"], 4);
+            createQuestion("Who became a national hero out of a work by the German poet Schiller?",
+                ["Adolf Ogi", "Andr\u00E9 Bucher", "Roger Schawinsky", "Rudolph von Habsburg", "Wilhelm Tell"], 4);
             break;
         case 4:
-            createQuestion("Switzerland has common borders with how many countries?", [3, 4, 5, 6, 7, "over 9000"], 2);
+            createQuestion("Switzerland has common borders with how many countries?",
+                [3, 4, 5, 6, 7, "over 9000"], 2);
             break;
         case 5:
-            createQuestion("How large is Switzerland (in square kilometers)?", [34241, 38903, 39873, 39874, 41284], 4);
+            createQuestion("How large is Switzerland (in square kilometers)?",
+                [34241, 38903, 39873, 39874, 41284], 4);
             break;
         case 6:
-            document.getElementById("radioButtonGroup").innerHTML = '<input type="button" style="display: block; margin: 0 auto;" value="Try again!" onclick="history.go(0)" />';
+            document.getElementById("radioButtonGroup").innerHTML =
+                '<input type="button" style="display: block; margin: 0 auto;" value="Try again!" onclick="history.go(0)" />';
             document.getElementById("container").removeChild(document.getElementById("timer_var"));
             createSummary();
             break;
