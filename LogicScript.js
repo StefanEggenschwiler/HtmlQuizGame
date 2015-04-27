@@ -27,9 +27,9 @@ function createQuestion(question, answerOptions, ans) {
 }
 
 function setTimer() {
-    document.getElementById('timer_var').innerHTML = seconds_left + ' Seconds left!';
+    document.getElementById('timer_var').innerHTML = seconds_left + ' seconds left!';
     interval = setInterval(function() {
-        document.getElementById('timer_var').innerHTML = --seconds_left + ' Seconds left!';
+        document.getElementById('timer_var').innerHTML = --seconds_left + ' seconds left!';
 
         if (seconds_left <= 0)
         {
@@ -68,12 +68,13 @@ function createRadioButton(text) {
     var label = document.createElement("label");
     var radio = document.createElement("input");
     var span = document.createElement("span");
+    
     var textNode = document.createTextNode(text);
     span.appendChild(textNode);
 
     radio.type = "radio";
     radio.name = "answerOptions";
-    radio.style.display = 'none';
+    radio.style.display = "none";
 
     label.appendChild(radio);
     label.appendChild(span);
