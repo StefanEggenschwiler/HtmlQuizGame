@@ -1,7 +1,7 @@
-html
-{
+html {
     background-image: url("content/background.jpg");
 }
+
 body {
     width: 100%;
     text-align:center;
@@ -34,11 +34,6 @@ input {
 var {
     font-style: normal;
 }
-
-label {
-    display:block;
-}
-
 
 label:hover {
     cursor:crosshair;
@@ -83,7 +78,11 @@ var, label{
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 5px;
+}
+
+label {
     margin: 25px;
+    display:block;
 }
 
 label:hover
