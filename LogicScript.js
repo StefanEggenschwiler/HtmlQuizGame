@@ -4,7 +4,9 @@
 var questionNo;
 var answer;
 var points;
+var interval;
 var seconds_left;
+
 
 function initialize() {
     questionNo = 1;
@@ -21,18 +23,16 @@ function createQuestion(question, answerOptions, ans) {
         createRadioButton(answerOptions[index]);
     }
     questionNo++;
-    timer();
+    setTimer();
 }
 
-function timer() {
+function setTimer() {
     document.getElementById('timer_var').innerHTML = seconds_left + ' Seconds left!';
-    var interval = setInterval(function() {
+    interval = setInterval(function() {
         document.getElementById('timer_var').innerHTML = --seconds_left + ' Seconds left!';
 
         if (seconds_left <= 0)
         {
-            clearInterval(interval);
-            seconds_left = 10;
             evaluateQuestion();
         }
     }, 1000);
@@ -41,6 +41,8 @@ function timer() {
 
 
 function evaluateQuestion() {
+    seconds_left = 10;
+    clearInterval(interval);
     var radios = document.getElementsByName("answerOptions");
     for (var i = 0, length = radios.length; i < length; i++) {
         if (radios[i].checked) {
@@ -94,6 +96,7 @@ function nextQuestion() {
             break;
         case 6:
             document.getElementById("radioButtonGroup").innerHTML = "";
+            document.getElementById("timer_var").innerHTML = "";
             createSummary();
             break;
     }
