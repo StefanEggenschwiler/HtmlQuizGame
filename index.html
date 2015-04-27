@@ -13,15 +13,17 @@
         <script src="LogicScript.js"></script>
     </head>
     <body onload="initialize()">
-        <h1> Quiz </h1>
-        This is an example for a small quiz game, consisting of five questions:
-    <!--  Questions taken from http://www.testedich.de/quizerstellungneu/dasquiztd.php3?testid=999895847 -->
-        <form>
-            <fieldset id="radioButtonGroup">
-                <legend><var id="question"/></legend>
-                <div id="placeholder"></div>
-                <input type="button" value="Submit answer" onclick="evaluateQuestion()" />
-            </fieldset>
-        </form>
+        <div id="container">
+            <h1> Quiz </h1>
+            <p>This is an example for a small quiz game, consisting of five questions.</p>
+            <!--  Questions taken from http://www.testedich.de/quizerstellungneu/dasquiztd.php3?testid=999895847 -->
+            <form>
+                <fieldset id="radioButtonGroup">
+                    <legend><var id="question"/></legend>
+                    <div id="placeholder"></div>
+                    <input type="button" value="Submit answer" onclick="evaluateQuestion()" />
+                </fieldset>
+            </form>
+        </div>
     </body>
 </html>
