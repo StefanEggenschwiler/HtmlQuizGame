@@ -1,0 +1,57 @@
+body {
+    width: 100%;
+    text-align:center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color:#2E2E2E;
+}
+
+#container {
+    margin: auto;
+    width: 700px;
+    text-align:left;
+    padding: 10px;
+}
+
+h1 {
+    text-align:center;
+    width:100%;
+}
+
+fieldset {
+    padding:20px;
+}
+
+input {
+    margin-top: 20px;
+}
+
+var {
+    font-style: normal;
+}
+
+label:hover {
+    cursor:crosshair;
+}
+
+/* Classes */
+.i {
+    font-style: italic;
+}
+
+.small {
+    font-size: 80%;
+}
+
+.center {
+    width:100%;
+    text-align:center;
+}
+
+/* Responsive */
+@media (max-width: 720px)
+{
+    #container {
+        width: 100%;
+    }
+}
