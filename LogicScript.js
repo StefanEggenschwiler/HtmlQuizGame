@@ -106,6 +106,8 @@ function nextQuestion() {
 }
 
 function createSummary() {
+    document.getElementById('timer_var').style.display = "none";
+
     if (confirm("Quiz finished! You got "+points+" out of "+(questionNo-1)+ " right!\n\n Press 'OK' if you wish to play again.")) {
         history.go(0);
     }
