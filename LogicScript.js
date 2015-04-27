@@ -73,6 +73,7 @@ function createRadioButton(text) {
 
     radio.type = "radio";
     radio.name = "answerOptions";
+    radio.style.display = 'none';
 
     label.appendChild(radio);
     label.appendChild(span);
