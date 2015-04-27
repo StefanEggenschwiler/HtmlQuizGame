@@ -32,7 +32,6 @@ function evaluateQuestion() {
             nextQuestion();
         }
     }
-
 }
 
 //http://stackoverflow.com/a/3955238
@@ -75,6 +74,7 @@ function nextQuestion() {
             createQuestion("How large is Switzerland (in square kilometers)?", [34241, 38903, 39873, 39874, 41284], 4);
             break;
         case 6:
+            document.getElementById("question").innerHTML = " ";
             alert("Quiz finished! You got "+points+" out of "+(questionNo-1)+ " right!");
             break;
     }
