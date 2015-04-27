@@ -4,10 +4,12 @@
 var questionNo;
 var answer;
 var points;
+var seconds_left;
 
 function initialize() {
     questionNo = 1;
     points = 0;
+    seconds_left = 10;
     nextQuestion();
 }
 
@@ -19,7 +21,24 @@ function createQuestion(question, answerOptions, ans) {
         createRadioButton(answerOptions[index]);
     }
     questionNo++;
+    timer();
 }
+
+function timer() {
+    document.getElementById('timer_var').innerHTML = seconds_left + ' Seconds left!';
+    var interval = setInterval(function() {
+        document.getElementById('timer_var').innerHTML = --seconds_left + ' Seconds left!';
+
+        if (seconds_left <= 0)
+        {
+            clearInterval(interval);
+            seconds_left = 10;
+            evaluateQuestion();
+        }
+    }, 1000);
+}
+
+
 
 function evaluateQuestion() {
     var radios = document.getElementsByName("answerOptions");
@@ -28,10 +47,10 @@ function evaluateQuestion() {
             if(i == answer){
                 points++;
             }
-            removePreviousQuestion();
-            nextQuestion();
         }
     }
+    removePreviousQuestion();
+    nextQuestion();
 }
 
 //http://stackoverflow.com/a/3955238
@@ -74,8 +93,14 @@ function nextQuestion() {
             createQuestion("How large is Switzerland (in square kilometers)?", [34241, 38903, 39873, 39874, 41284], 4);
             break;
         case 6:
-            document.getElementById("question").innerHTML = " ";
-            alert("Quiz finished! You got "+points+" out of "+(questionNo-1)+ " right!");
+            document.getElementById("radioButtonGroup").innerHTML = "";
+            createSummary();
             break;
+    }
+}
+
+function createSummary() {
+    if (confirm("Quiz finished! You got "+points+" out of "+(questionNo-1)+ " right!\n\n Press 'OK' if you wish to play again.")) {
+        history.go(0);
     }
 }
