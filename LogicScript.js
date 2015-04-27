@@ -7,7 +7,6 @@ var points;
 var interval;
 var seconds_left;
 
-
 function initialize() {
     questionNo = 1;
     points = 0;
@@ -37,8 +36,6 @@ function setTimer() {
         }
     }, 1000);
 }
-
-
 
 function evaluateQuestion() {
     seconds_left = 10;
