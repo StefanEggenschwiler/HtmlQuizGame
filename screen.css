@@ -82,35 +82,34 @@ var, label{
 
 label {
     margin: 25px;
-    display:block;
+    display: block;
+    line-height: 200%;
+    padding:5px;
 }
 
-label:hover
-{
+label:hover {
     color: black;
     background-color: white;
     border-bottom:solid #7addf6;
     border-right:solid #7addf6;
     border-top:solid #2e96b0;
     border-left:solid #2e96b0;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 5px;
     margin: 25px;
 }
 
 input[type="button"]{
+    font-size:150%;
+
     border-bottom:solid #7addf6;
     border-right:solid #7addf6;
     border-top:solid #2e96b0;
     border-left:solid #2e96b0;
 }
 
-input[type="radio"]:checked + span
-{
+input[type="radio"]:checked + span {
     background-color: yellow;
 }
-input[type="radio"].toggle
-{
+
+input[type="radio"].toggle {
     display:none;
 }
