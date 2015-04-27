@@ -1,3 +1,7 @@
+html
+{
+    background-image: url("content/background.jpg");
+}
 body {
     width: 100%;
     text-align:center;
@@ -13,9 +17,10 @@ body {
     padding: 10px;
 }
 
-h1 {
+h1, .i {
     text-align:center;
     width:100%;
+    color:white;
 }
 
 fieldset {
@@ -54,4 +59,56 @@ label:hover {
     #container {
         width: 100%;
     }
+}
+
+
+/*radiobuttons style*/
+
+#radioButtonGroup{
+    background-color: azure;
+}
+
+var, label{
+    color: black;
+    background-color: white;
+    border-top:solid #2e96b0;
+    border-left:solid #2e96b0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    margin: 25px;
+}
+span
+{
+    margin-top: 25px;
+}
+
+label:hover
+{
+    color: black;
+    background-color: white;
+    border-bottom:solid #7addf6;
+    border-right:solid #7addf6;
+    border-top:solid #2e96b0;
+    border-left:solid #2e96b0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    margin: 25px;
+}
+
+input[type="button"]{
+    border-bottom:solid #7addf6;
+    border-right:solid #7addf6;
+    border-top:solid #2e96b0;
+    border-left:solid #2e96b0;
+}
+
+input[type="radio"]:checked + span
+{
+    background-color: yellow;
+}
+input[type="radio"].toggle
+{
+    display:none;
 }
