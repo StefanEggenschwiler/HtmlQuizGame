@@ -27,9 +27,9 @@ function createQuestion(question, answerOptions, ans) {
 }
 
 function setTimer() {
-    document.getElementById('timer_var').innerHTML = seconds_left + ' Seconds left!';
+    document.getElementById('timer_var').innerHTML = seconds_left + ' seconds left!';
     interval = setInterval(function() {
-        document.getElementById('timer_var').innerHTML = --seconds_left + ' Seconds left!';
+        document.getElementById('timer_var').innerHTML = --seconds_left + ' seconds left!';
 
         if (seconds_left <= 0)
         {
