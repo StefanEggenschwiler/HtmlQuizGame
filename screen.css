@@ -35,6 +35,11 @@ var {
     font-style: normal;
 }
 
+label {
+    display:block;
+}
+
+
 label:hover {
     cursor:crosshair;
 }
@@ -71,16 +76,14 @@ label:hover {
 var, label{
     color: black;
     background-color: white;
+    border-bottom:solid azure;
+    border-right:solid azure;
     border-top:solid #2e96b0;
     border-left:solid #2e96b0;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 5px;
     margin: 25px;
-}
-span
-{
-    margin-top: 25px;
 }
 
 label:hover
