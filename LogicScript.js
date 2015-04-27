@@ -98,16 +98,14 @@ function nextQuestion() {
             createQuestion("How large is Switzerland (in square kilometers)?", [34241, 38903, 39873, 39874, 41284], 4);
             break;
         case 6:
-            document.getElementById("radioButtonGroup").innerHTML = "";
-            document.getElementById("timer_var").innerHTML = "";
+            document.getElementById("radioButtonGroup").innerHTML = '<input type="button" style="display: block; margin: 0 auto;" value="Try again!" onclick="history.go(0)" />';
+            document.getElementById("container").removeChild(document.getElementById("timer_var"));
             createSummary();
             break;
     }
 }
 
 function createSummary() {
-    document.getElementById('timer_var').style.display = "none";
-
     if (confirm("Quiz finished! You got "+points+" out of "+(questionNo-1)+ " right!\n\n Press 'OK' if you wish to play again.")) {
         history.go(0);
     }
