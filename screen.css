@@ -98,6 +98,7 @@ label:hover {
 }
 
 input[type="button"]{
+    margin-left:33px;
     font-size:150%;
 
     border-bottom:solid #7addf6;
